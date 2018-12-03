@@ -1,0 +1,103 @@
+.top-banner {
+  height: 15vh;
+  width: 100vw;
+  background-color: rgb(43,155,214);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+  font-size: 2em;
+}
+.top-banner-left {
+  margin-left: 30px;
+}
+.top-banner-right {
+  margin-right: 30px;
+}
+.info-card {
+  width: 60vw;
+  height: 53vh;
+  background: rgb(119,124,125);
+}
+.body {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+
+}
+body {
+  /*background: rgb(119,124,125);*/
+  background: rgb(30,31,32);
+}
+.name, .from, .fun-fact, .would-you {
+  margin-left: 80px;
+}
+.country, .indoor, .travel, .tops, .dog{
+  margin-left: 160px;
+}
+span {
+  font-weight: normal;
+}
+p {
+  float:right;
+  margin-right: 20px;
+}
+.bar-container {
+  display: flex;
+  justify-content: center;
+}
+.bottom-bar {
+  width: 60vw;
+  height: 5vh;
+  color: rgb(116,121,123);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.previous {
+  float: left;
+}
+.next {
+  float: right;
+}
+.modify {
+  display: flex;
+  width: 30vw;
+  justify-content: space-between;
+}
+.previous, .next {
+  background: none;
+  height: 3vh;
+  border: none;
+  font-size: 1.5em;
+  color: rgb(116,121,123)
+}
+.button {
+  height: 30px;
+  width: 100px;
+  background: rgb(43,155,214);
+  border: none;
+  border-radius: 20px;
+  font-size: 1.5em;
+}
+.edit-container {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+}
+.edit {
+  width: 30vw;
+  margin-left: 35.8vw;
+}
+.commit-changes {
+  margin-left: 48.2vw;
+  height: 30px;
+  width: 100px;
+  background: rgb(43,155,214);
+  border: none;
+  border-radius: 20px;
+  font-size: 1.5em;
+  margin-top: 5px;
+}
