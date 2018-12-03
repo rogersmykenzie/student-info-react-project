@@ -42,6 +42,12 @@ class App extends Component {
     }
   }
   removeStudent() {
+    let oneArr = [{name: null, from: null, funFact: null, cityOrCountry: null, indoorsOrOutdoors: null, travel: null, food: null, dogOrCat: null, key: 'Zk7gfx7X4wbSlhnmReW4o9qYI7kdKNwGoL3imDnBHJ8CVupT851lnWxgSOzh'}];
+    if(this.state.students.length === 1) {
+      this.setState({students: oneArr});
+      console.log(students);
+      return;
+    }
     var arr = [];
     for(let i = 0; i < this.state.students.length; i++) {
       if(i != this.state.currStudent) {
@@ -63,7 +69,10 @@ class App extends Component {
     let food = prompt("Would this student like Top's or Subway better?");
     let dogOrCat = prompt("Does this student like dogs or cats better?");
     let obj = {name, from, funFact, cityOrCountry, indoorsOrOutdoors, travel, food, dogOrCat};
-    this.setState({students: [...students, obj]});
+    if(this.state.students.length === 1 && this.state.students.key === 'Zk7gfx7X4wbSlhnmReW4o9qYI7kdKNwGoL3imDnBHJ8CVupT851lnWxgSOzh') {
+      this.setState({students: [obj]});
+    } else 
+      this.setState({students: [...this.state.students, obj], currStudent: this.state.students.length});
   }
   changeStudent() {
     let obj = this.state.students[this.state.currStudent];
@@ -93,7 +102,8 @@ class App extends Component {
     }
     let arr = [...this.state.students];
     arr.splice(this.state.currStudent,1,obj);
-    this.setState({students: arr});
+    this.setState({students: arr, change: null});
+    this.setState({})
   }
   editStudent() {
     console.log('working');
